@@ -1,10 +1,10 @@
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class StringInteraction : XRBaseInteractable
+public class StringInteraction : XRBaseInteractable //String is able to be interacted with
 {
-    [SerializeField] private Transform stringStartPoint;
-    [SerializeField] private Transform stringEndPoint;
+    [SerializeField] public Transform stringStartPoint;
+    [SerializeField] public Transform stringEndPoint;
 
     private XRBaseInteractor stringInteractor = null; 
     private Vector3 pullPosition;
@@ -44,10 +44,11 @@ public class StringInteraction : XRBaseInteractable
         {
             this.pullPosition = this.stringInteractor.transform.position;
             this.PullAmount = CalculatePull(this.pullPosition);
-						Debug.Log("<<<<< Pull amount is "+ PullAmount+" >>>>>");
+						// Debug.Log("<<<<< Pull amount is "+ PullAmount+" >>>>>");
         }           
     }
 
+    //Calculates the pull amount and keeps the direction front to back instead of allowing the pull to go side to side
     private float CalculatePull(Vector3 pullPosition)
     {
         this.pullDirection = pullPosition - stringStartPoint.position;

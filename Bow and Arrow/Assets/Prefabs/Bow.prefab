@@ -130,7 +130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4975227104014856656}
   - component: {fileID: 7971130004404395613}
-  - component: {fileID: 1146583972110675560}
+  - component: {fileID: 7292093185538386627}
   m_Layer: 0
   m_Name: Bow
   m_TagString: Bow
@@ -170,11 +170,11 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1146583972110675560
+--- !u!114 &7292093185538386627
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -183,7 +183,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5638610209581771626}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
+  m_Script: {fileID: 11500000, guid: 621173e75d599e34c8e4b56d057c3fee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -255,17 +255,17 @@ MonoBehaviour:
       m_Calls: []
   m_AttachTransform: {fileID: 1944861383}
   m_AttachEaseInTime: 0.15
-  m_MovementType: 1
+  m_MovementType: 2
   m_VelocityDamping: 1
   m_VelocityScale: 1
   m_AngularVelocityDamping: 1
   m_AngularVelocityScale: 1
   m_TrackPosition: 1
-  m_SmoothPosition: 1
+  m_SmoothPosition: 0
   m_SmoothPositionAmount: 5
   m_TightenPosition: 0.5
   m_TrackRotation: 1
-  m_SmoothRotation: 1
+  m_SmoothRotation: 0
   m_SmoothRotationAmount: 5
   m_TightenRotation: 0.5
   m_ThrowOnDetach: 1
@@ -290,6 +290,7 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+  socketTransform: {fileID: 3235329325502880977}
 --- !u!1 &7107615571509224462
 GameObject:
   m_ObjectHideFlags: 0
