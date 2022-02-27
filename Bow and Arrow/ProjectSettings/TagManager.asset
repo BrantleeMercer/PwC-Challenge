@@ -6,6 +6,9 @@ TagManager:
   tags:
   - LeftController
   - RightController
+  - Tip
+  - Arrow
+  - Bow
   layers:
   - Default
   - TransparentFX
