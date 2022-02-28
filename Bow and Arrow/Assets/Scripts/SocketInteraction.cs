@@ -3,6 +3,12 @@ using UnityEngine;
 using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit;
 
+/*
+    Code followed from author Ashray Pai bow and arrow in vr tutorital
+
+    https://blog.immersive-insiders.com/bow-and-arrow-in-vr-part3/
+*/
+
 [RequireComponent(typeof(StringInteraction))]
 public class SocketInteraction : XRSocketInteractor //To interact with the socket set up on the bow string
 {
