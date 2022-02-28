@@ -1785,6 +1785,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bow
       objectReference: {fileID: 0}
+    - target: {fileID: 7292093185538386627, guid: f42d31ae8ead792479e3c4a8b7eccaf1, type: 3}
+      propertyPath: m_MovementType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7292093185538386627, guid: f42d31ae8ead792479e3c4a8b7eccaf1, type: 3}
+      propertyPath: m_RetainTransformParent
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8570881779724154955, guid: f42d31ae8ead792479e3c4a8b7eccaf1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9118208847140604616, guid: f42d31ae8ead792479e3c4a8b7eccaf1, type: 3}
       propertyPath: m_Interpolate
       value: 0
