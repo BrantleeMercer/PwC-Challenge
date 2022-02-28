@@ -71,3 +71,5 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 Bow and Arrow/Temp/UnityLockfile
+Bow and Arrow/Library/ArtifactDB
+Bow and Arrow/Library/SourceAssetDB
