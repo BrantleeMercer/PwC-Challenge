@@ -1,6 +1,12 @@
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
+/*
+    Code followed from author Ashray Pai bow and arrow in vr tutorital
+
+    https://blog.immersive-insiders.com/bow-and-arrow-in-vr-part1/
+*/
+
 public class StringInteraction : XRBaseInteractable //String is able to be interacted with
 {
     [SerializeField] public Transform stringStartPoint;

@@ -73,3 +73,8 @@ crashlytics-build.properties
 Bow and Arrow/Temp/UnityLockfile
 Bow and Arrow/Library/ArtifactDB
 Bow and Arrow/Library/SourceAssetDB
+*.json
+*.backup
+Bow and Arrow/Library/SourceAssetDB
+Bow and Arrow/Library/ArtifactDB
+*.asset

@@ -2,6 +2,12 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
+/*
+    Code followed from author Ashray Pai bow and arrow in vr tutorital
+
+    https://blog.immersive-insiders.com/bow-and-arrow-in-vr-part3/
+*/
+
 [RequireComponent(typeof(XRGrabInteractable))] // To ensure that the component has a XRGrabIntractable script attached
 public class ArrowInteraction : MonoBehaviour
 {
@@ -35,12 +41,6 @@ public class ArrowInteraction : MonoBehaviour
     {
         if (Physics.Linecast(lastPosition, tipPosition.position, out RaycastHit hitInfo))
         {
-            if (hitInfo.transform.TryGetComponent(out Rigidbody body))
-            {
-                this.arrowRigidBody.interpolation = RigidbodyInterpolation.None;
-                this.transform.parent = hitInfo.transform;
-                body.AddForce(arrowRigidBody.velocity, ForceMode.Impulse);
-            }
             this.StopArrow();
         }
     }
@@ -54,11 +54,11 @@ public class ArrowInteraction : MonoBehaviour
     public void ReleaseArrow(float value)
     {
         this.inAir = true;
-        MaskAndFire(value);
+        Fire(value);
         this.lastPosition = tipPosition.position;
     }
 
-    private void MaskAndFire(float power)
+    private void Fire(float power)
     {
         this.xRGrabInteractable.colliders[0].enabled = false;
         Vector3 force = -transform.right * power * speed;

@@ -1,6 +1,12 @@
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
+/*
+    Code followed from author Ashray Pai bow and arrow in vr tutorital
+
+    https://blog.immersive-insiders.com/bow-and-arrow-in-vr-part2/
+*/
+
 public class BowInteraction : XRGrabInteractable //Bow is able to be grabbed.
 {
     private LineRenderer bowString; 
