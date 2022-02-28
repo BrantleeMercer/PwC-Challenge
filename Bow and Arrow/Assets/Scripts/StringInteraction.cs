@@ -24,7 +24,7 @@ public class StringInteraction : XRBaseInteractable //String is able to be inter
     protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
         base.OnSelectEntered(args);
-        this.stringInteractor = (XRBaseInteractor) args.interactorObject;
+        this.stringInteractor = args.interactor;
     }
 
     //Called when the object that is in the hands are released
