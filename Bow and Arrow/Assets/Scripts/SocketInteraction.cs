@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit;
 
 [RequireComponent(typeof(StringInteraction))]
@@ -10,6 +12,7 @@ public class SocketInteraction : XRSocketInteractor //To interact with the socke
     private StringInteraction stringInteraction = null;
     private BowInteraction bowInteraction = null;
     private ArrowInteraction currentArrowInteraction = null;
+    private InputDevice _rightController;
    
     protected override void Awake()
     {
@@ -45,6 +48,7 @@ public class SocketInteraction : XRSocketInteractor //To interact with the socke
     {
         base.OnSelectEntered(args);
         StoreArrow(args.interactable);
+
     }
 
     private void StoreArrow(XRBaseInteractable interactable)
@@ -53,6 +57,13 @@ public class SocketInteraction : XRSocketInteractor //To interact with the socke
         {
             this.currentArrow = interactable;
             this.currentArrowInteraction = currentArrow.gameObject.GetComponent<ArrowInteraction>();
+            
+            var devices = new List<UnityEngine.XR.InputDevice>();
+            var desiredCharacteristics = UnityEngine.XR.InputDeviceCharacteristics.Right | UnityEngine.XR.InputDeviceCharacteristics.Controller;
+            UnityEngine.XR.InputDevices.GetDevicesWithCharacteristics(desiredCharacteristics, devices);
+            
+            _rightController = devices[0];
+            
         }
     }
 

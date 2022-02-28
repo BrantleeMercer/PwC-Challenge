@@ -63,7 +63,6 @@ public class ArrowInteraction : MonoBehaviour
         this.xRGrabInteractable.colliders[0].enabled = false;
         Vector3 force = -transform.right * power * speed;
         this.arrowRigidBody.AddForce(force, ForceMode.Impulse);
-        Debug.Log($"Mask and fire : force = {force}");
     }
 
 }
